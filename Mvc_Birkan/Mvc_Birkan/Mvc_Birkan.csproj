@@ -1706,6 +1706,7 @@
   <ItemGroup>
     <Compile Include="App_Classes\Kullanici.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Default1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KullaniciController.cs" />
@@ -1961,6 +1962,7 @@
     <Content Include="Views\Rol\Ekle.cshtml" />
     <Content Include="Views\Kullanici\RolAta.cshtml" />
     <Content Include="Views\Uye\GirisYap.cshtml" />
+    <Content Include="Views\Urun\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -11,6 +11,11 @@
         </header>
         <table class="table table-striped table-advance table-hover">
             <thead>
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder=" Arama Yap">
+                    </li>
+                </ul>
 
                 <tr>
                     <!--<th><i class="icon-crop"></i> Ürün Adı</th>-->
@@ -78,7 +83,7 @@
                         }
                         
                         <!--<td ><a href="/Urun/UrunEkle" class="btn btn-success btn-xs" role="button"><i class="icon-book"></i></a></td>-->
-                        <td><a href="#" class="btn btn-primary btn-xs" role="button"><i class="icon-pencil"></i></td>
+                        <td><a href="/Urun/Edit/@u.UrunID" class="btn btn-primary btn-xs" role="button"><i class="icon-pencil"></i></td>
                         <td><a href="/Urun/Sil/@u.UrunID" class="btn btn-danger btn-xs" role="button"><i class="icon-trash"></i></a></td>
                         
                     </tr>
