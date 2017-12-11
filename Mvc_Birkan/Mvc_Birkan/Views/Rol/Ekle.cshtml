@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Rol";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Rol Ekleme Sayfası
+            </header>
+            <div class="panel-body">
+                <form action="/Rol/Ekle/" class="form-horizontal" method="post" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Rol Adı:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Rol adı giriniz" name="RolAdi">
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-danger">Ekle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+    </div>
+</div>

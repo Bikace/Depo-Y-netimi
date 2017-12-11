@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Rol Ata";
+}
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Rol Atama Sayfası
+            </header>
+            <div class="panel-body">
+                <form action="/Kullanici/RolAta/" class="form-horizontal" method="post" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Kullanıcı Adı:</label>
+                        <div class="col-lg-10">
+                          <select name="KullaniciAdi" class="form-control">
+                              @foreach (MembershipUser mu in ViewBag.Kullanicilar)
+                              {
+                                  <option value="@mu.UserName">@mu.UserName</option>
+                              }
+                          </select>
+                            <!--<p class="help-block">Example block-level help text here.</p>-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Rol:</label>
+                        <div class="col-lg-10">
+                            <select name="RolAdi" class="form-control">
+                                @foreach (string rol in ViewBag.Roller)
+                                {
+                                    <option value="@rol">@rol</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-danger">Ekle</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+</div>

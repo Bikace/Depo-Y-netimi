@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Yeni Üye";
+}
+
+@section head{
+    <style>
+        #hata{
+            color:red;
+            font-size:16px;
+        }
+    </style>
+}
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Üye Ekleme Sayfası
+            </header>
+            <div class="panel-body">
+                <form action="/Kullanici/Ekle/" class="form-horizontal" method="post" role="form">
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Kullanıcı Adı:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Kullanıcı Adı Giriniz" name="KullaniciAdi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Parola</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" placeholder="Parola Giriniz" name="Parola" min="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Email:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Email Giriniz" name="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Gizli Soru:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Gizli Soru Giriniz" name="GizliSoru">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Gizli Cevap:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Gizli Cevap Giriniz" name="GizliCevap">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-danger">Ekle</button>
+                        </div>
+                    </div>
+                </form>
+                <span id="hata">@ViewBag.Mesaj</span>
+            </div>
+        </section>
+    </div>
+</div>

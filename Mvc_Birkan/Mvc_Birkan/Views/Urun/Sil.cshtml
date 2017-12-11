@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Ürün Sil";
+}
+@using Mvc_Birkan.Models
+@model Urunler
+
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                Ürün Silme Sayfası
+            </header>
+            <div class="panel-body">
+                <form action="/Urun/Sil" class="form-horizontal" method="post" role="form">
+                    <div class="form-group">
+                        <input type="hidden" name="UrunID" value="@Model.UrunID"/>
+                        <label class="control-label">&nbsp;&nbsp;&nbsp;@Model.UrunAdi ürünü silinsinmi?&nbsp;</label>
+                        <button type="submit" value="Evet" class="btn-danger" ><b>Evet</b></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>

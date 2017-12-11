@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Roller";
+}
+@model List<string>
+<div class="col-sm-6">
+    <section class="panel">
+        <header class="panel-heading">
+            Roller
+        </header>
+        <table class="table table-striped table-advance table-hover">
+            <thead>
+                <tr>
+                    <!--<th><i class="icon-crop"></i> Ürün Adı</th>-->
+                    <!--<th class="hidden-phone"><i class="icon-question-sign"></i> Descrition</th>-->
+                    <th> Rol Adı</th>
+                    <th> Sil</th>
+                    <th><a href="/Rol/Ekle" role="button" class="btn btn-default btn-success">Yeni Rol</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (string rol in Model)
+                {
+                    <tr>
+                        <td class="hidden-phone">@rol</td>
+                        <td><a href="#" class="btn btn-danger btn-xs rolSil" role="button" data-roladi="@rol"><i class="icon-trash"></i></a></td><!--JAVA SCRİPT UYGULAMASI BURDA BAŞLADI-->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+</div>
