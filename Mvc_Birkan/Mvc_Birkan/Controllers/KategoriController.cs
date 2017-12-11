@@ -35,6 +35,7 @@ namespace Mvc_Birkan.Controllers
             Kategoriler k = ctx.Kategorilers.FirstOrDefault(x => x.KategoriID == id);
             ctx.Kategorilers.Remove(k);
             ctx.SaveChanges();
+            //test
         }
 	}
 }
